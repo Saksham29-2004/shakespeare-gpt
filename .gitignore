@@ -19,3 +19,5 @@ shakespeare-frontend/dist/
 .vscode/
 .DS_Store
 Thumbs.db
+shakespeare-frontend/.env.local
+shakespeare-frontend/.env.*.local
