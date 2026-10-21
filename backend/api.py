@@ -1,13 +1,23 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
+import os
 from fastapi.middleware.cors import CORSMiddleware
 
 from text_generator import TextGenerator
 app = FastAPI(title = "Shakespeare GPT API")
 
+frontend_origins = os.getenv(
+    "FRONTEND_ORIGIN",
+    "http://localhost:5173",
+).split(",")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+        origin.strip()
+        for origin in frontend_origins
+        if origin.strip()
+    ],
     allow_credentials=False,
     allow_methods=["GET", "POST"],
     allow_headers=["Content-Type"],
