@@ -1,0 +1,21 @@
+
+# Python virtual environments
+backend/.venv/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Frontend dependencies and build output
+shakespeare-frontend/node_modules/
+shakespeare-frontend/dist/
+
+# Editor and OS files
+.vscode/
+.DS_Store
+Thumbs.db

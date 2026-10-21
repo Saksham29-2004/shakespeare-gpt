@@ -1,0 +1,8 @@
+{
+  "vocab_size": 365,
+  "embedding_dim": 64,
+  "block_size": 128,
+  "hidden_dim": 256,
+  "num_layers": 2,
+  "num_heads": 4
+}

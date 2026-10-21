@@ -1,0 +1,157 @@
+
+:root {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #29251f;
+  background: #f7f3eb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+textarea,
+input {
+  font: inherit;
+}
+
+.app {
+  width: min(820px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 64px 0;
+}
+
+.app h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  letter-spacing: -1.5px;
+}
+
+.app > p {
+  color: #71695e;
+  line-height: 1.7;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 150px;
+  margin: 28px 0 22px;
+  padding: 18px;
+  border: 1px solid #d9d0c2;
+  border-radius: 12px;
+  background: #fffdf9;
+  color: #29251f;
+  line-height: 1.7;
+  resize: vertical;
+}
+
+textarea:focus {
+  outline: 2px solid #9b7951;
+  outline-offset: 2px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0 28px;
+}
+
+.controls label {
+  font-weight: 600;
+}
+
+.controls input[type="range"] {
+  width: 100%;
+  accent-color: #765433;
+  margin: 0 0 14px;
+  cursor: pointer;
+}
+
+button {
+  padding: 11px 20px;
+  border: 1px solid #765433;
+  border-radius: 8px;
+  background: #765433;
+  color: white;
+  cursor: pointer;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+button:hover:not(:disabled) {
+  background: #5d4027;
+}
+
+button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.error {
+  margin-top: 16px;
+  color: #a12626;
+  line-height: 1.5;
+}
+
+.result {
+  margin-top: 32px;
+  padding: 24px;
+  border: 1px solid #e0d5c5;
+  border-radius: 12px;
+  background: #fffdf9;
+  box-shadow: 0 8px 28px rgb(65 48 27 / 5%);
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.result-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.result-header button {
+  flex-shrink: 0;
+}
+
+pre {
+  margin: 0;
+  color: #393127;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: inherit;
+  line-height: 1.9;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 36px 0;
+  }
+
+  .result {
+    padding: 18px;
+  }
+
+  .result-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
